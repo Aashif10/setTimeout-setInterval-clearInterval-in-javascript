@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#text{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+button{
+    margin-top: 20px;
+}
+</style>
+<body>
+    
+   <div id="text"></div>
+   <button onclick="stop()">Stop Animation</button>
+
+<script>
+    let a=0;
+         let clear=setInterval(animation,1000)
+      function animation(){
+        a=a+10;
+      if(a==500){
+        clearInterval(clear);
+      }
+         else{
+            var target=document.getElementById("text");
+        target.style.width=a+'px';
+        target.style.height=a+'px';
+        target.style.backgroundColor="red";
+         }
+      }
+   
+
+</script>
+
+</body>
+</html>

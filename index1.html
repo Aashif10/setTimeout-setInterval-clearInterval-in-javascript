@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+        }
+        button{
+            margin-top: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="text"></div>
+    <button onclick="stop()">STOP</button>
+
+    <script>
+        let clear=setTimeout(Animation,5000)
+        function Animation(){
+            let target=document.getElementById("text");
+            target.style.width="500px";
+            target.style.backgroundColor="gold";
+        }
+        function stop(){
+            clearInterval(clear);
+        }
+    </script>
+</body>
+</html>
